@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anubhav Chauhan - Software Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Anubhav Chauhan</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <div class="custom-avatar" id="profile-img">
+                        <span class="avatar-initials">AC</span>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-name">Anubhav Chauhan</h1>
+                    <h2 class="hero-title">Software Developer</h2>
+                    <p class="hero-description">
+                        Software Developer with hands-on experience at Cognizant, excelling in GCP, Spring Boot, and microservices. 
+                        Spearheaded real-time IoT data transfer for secure vehicle-to-cloud communication, showcasing adaptability 
+                        and innovative problem-solving.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="Anubhav_Chauhan_Resume.pdf" class="btn btn-secondary" target="_blank" download="Anubhav_Chauhan_Resume.pdf">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a passionate Software Developer currently working as a Programmer Analyst at Cognizant. 
+                        My expertise lies in developing scalable solutions using modern technologies like GCP, Spring Boot, 
+                        and microservices architecture.
+                    </p>
+                    <p>
+                        Currently, I'm working on the innovative 'Qualcomm Car to Cloud' project, where I lead real-time 
+                        IoT data transfer development, ensuring secure and scalable vehicle-to-cloud communication. 
+                        I'm committed to delivering high-impact solutions in fast-paced environments.
+                    </p>
+                    <div class="education-info">
+                        <h3>Education</h3>
+                        <div id="education-container"></div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>1+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>8.96</h3>
+                        <p>College GPA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid" id="skills-container">
+                <!-- Skills will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline" id="experience-container">
+                <!-- Experience will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid" id="projects-container">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-description">
+                Interested in working together? Let's have a conversation about how I can contribute to your team.
+            </p>
+            <div class="contact-content">
+                <div class="contact-info" id="contact-container">
+                    <!-- Contact info will be loaded dynamically -->
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="from_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="from_email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Anubhav Chauhan. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="mailto:anubhav.rajput055@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/anubhav-chauhan-1843a4194/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/anubhav-chauhan" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

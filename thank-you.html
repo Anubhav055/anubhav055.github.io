@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Anubhav Chauhan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-content">
+            <div class="thank-you-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Thank You!</h1>
+            <p>Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+            <div class="thank-you-buttons">
+                <a href="index.html" class="btn btn-primary">Back to Portfolio</a>
+                <a href="mailto:anubhav.rajput055@gmail.com" class="btn btn-secondary">Email Me Directly</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .thank-you-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a0a;
+            padding: 2rem;
+        }
+
+        .thank-you-content {
+            text-align: center;
+            max-width: 500px;
+            background: #18181b;
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid #27272a;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .thank-you-icon {
+            font-size: 4rem;
+            color: #10b981;
+            margin-bottom: 1.5rem;
+        }
+
+        .thank-you-content h1 {
+            font-size: 2.5rem;
+            color: #e4e4e7;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .thank-you-content p {
+            font-size: 1.1rem;
+            color: #d4d4d8;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .thank-you-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 480px) {
+            .thank-you-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 200px;
+            }
+        }
+    </style>
+</body>
+</html> 

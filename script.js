@@ -105,7 +105,7 @@ const fallbackData = {
         { type: 'Email', value: 'anubhav.rajput055@gmail.com', icon: 'fas fa-envelope' },
         { type: 'Location', value: 'Kolkata, West Bengal 700060', icon: 'fas fa-map-marker-alt' },
         { type: 'LinkedIn', value: 'https://www.linkedin.com/in/anubhav-chauhan-1843a4194/', icon: 'fab fa-linkedin' },
-        { type: 'GitHub', value: 'https://github.com/anubhav-chauhan', icon: 'fab fa-github' }
+        { type: 'GitHub', value: 'https://github.com/Anubhav055', icon: 'fab fa-github' }
     ]
 };
 

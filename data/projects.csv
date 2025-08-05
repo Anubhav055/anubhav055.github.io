@@ -1,0 +1,6 @@
+title,description,technologies,icon,github,demo
+Qualcomm Car to Cloud,Real-time IoT data transfer system enabling secure vehicle-to-cloud communication with scalable microservices architecture. Implemented comprehensive monitoring and logging solutions for production environment.,Java Spring Boot GCP Microservices PostgreSQL,fas fa-car,#,#
+Face Recognition using IoT,Face recognition system integrated with IoT devices for real-time secure authentication by analyzing facial features using machine learning algorithms. Built during academic project with practical implementation.,Java Python OpenCV IoT Raspberry Pi,fas fa-user-check,#,#
+Driver Anti-Sleep Device,Innovative safety device designed to detect driver drowsiness and prevent accidents through real-time monitoring and alert systems. Presented at XPLORE'2022 technical event.,Arduino C++ Sensors IoT,fas fa-shield-alt,#,#
+Professional Java Development,Comprehensive Java programming certification project covering advanced concepts object-oriented programming design patterns and enterprise application development.,Java Spring Hibernate Maven,fab fa-java,#,#
+Web Application Portfolio,Responsive portfolio website showcasing projects and skills with modern UI/UX design principles. Features dynamic content loading and mobile-first approach.,HTML CSS JavaScript Bootstrap,fas fa-laptop-code,#,# 

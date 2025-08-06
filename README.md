@@ -1,4 +1,4 @@
-# Anubhav Chauhan - Portfolio Website
+# Anubhav Chauhan - Portfolio Website 
 
 A modern, responsive portfolio website built with HTML, CSS, and JavaScript featuring dynamic content management through CSV files. Based on a clean dark theme design with smooth animations and mobile-first approach.
 
@@ -172,5 +172,6 @@ For questions or customization help:
 This portfolio template is free to use and modify for personal and commercial projects.
 
 ---
+
 
 **Built with ❤️ by Anubhav Chauhan** 

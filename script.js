@@ -116,12 +116,21 @@ function parseCSV(text) {
     const data = [];
     
     for (let i = 1; i < lines.length; i++) {
+        // Skip empty lines
+        if (!lines[i].trim()) {
+            continue;
+        }
+        
         const values = lines[i].split(',').map(v => v.trim());
         const row = {};
         headers.forEach((header, index) => {
             row[header] = values[index] || '';
         });
-        data.push(row);
+        
+        // Only add rows that have at least a type and value
+        if (row.type && row.value) {
+            data.push(row);
+        }
     }
     return data;
 }

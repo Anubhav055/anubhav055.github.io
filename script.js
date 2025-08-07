@@ -102,7 +102,7 @@ const fallbackData = {
     
     languages: [
         { language: 'English', proficiency: 'Professional', icon: '🌍' },
-        { language: 'Hindi', proficiency: 'Elementary', icon: '🇮🇳' },
+        { language: 'Hindi', proficiency: 'Elementary', icon: '📚' },
         { language: 'Bengali', proficiency: 'Elementary', icon: '📚' }
     ],
     
@@ -561,31 +561,31 @@ function addScrollAnimations() {
     }, 100);
 }
 
-// Typing effect for hero description
-function initTypingEffect() {
-    const heroDescription = document.querySelector('.hero-description');
-    if (!heroDescription) return;
+// Typing effect for hero description - DISABLED
+// function initTypingEffect() {
+//     const heroDescription = document.querySelector('.hero-description');
+//     if (!heroDescription) return;
 
-    const text = heroDescription.textContent;
-    heroDescription.textContent = '';
-    let i = 0;
+//     const text = heroDescription.textContent;
+//     heroDescription.textContent = '';
+//     let i = 0;
 
-    function typeWriter() {
-        if (i < text.length) {
-            heroDescription.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
-        }
-    }
+//     function typeWriter() {
+//         if (i < text.length) {
+//             heroDescription.textContent += text.charAt(i);
+//             i++;
+//             setTimeout(typeWriter, 50);
+//         }
+//     }
 
-    // Start typing effect after a delay
-    setTimeout(typeWriter, 1000);
-}
+//     // Start typing effect after a delay
+//     setTimeout(typeWriter, 1000);
+// }
 
-// Initialize typing effect when page loads
-window.addEventListener('load', () => {
-    setTimeout(initTypingEffect, 500);
-});
+// Initialize typing effect when page loads - DISABLED
+// window.addEventListener('load', () => {
+//     setTimeout(initTypingEffect, 500);
+// });
 
 // Scroll to top functionality
 function scrollToTop() {

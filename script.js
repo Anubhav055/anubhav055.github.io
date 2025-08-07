@@ -127,8 +127,9 @@ function parseCSV(text) {
             row[header] = values[index] || '';
         });
         
-        // Only add rows that have at least a type and value
-        if (row.type && row.value) {
+        // Only add rows that have some non-empty data
+        const hasData = Object.values(row).some(value => value && value.trim());
+        if (hasData) {
             data.push(row);
         }
     }

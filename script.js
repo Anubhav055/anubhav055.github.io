@@ -387,7 +387,12 @@ function populateContact(contact) {
         return;
     }
 
-    contactContainer.innerHTML = contact.map(item => {
+    // Filter out any empty or invalid contact items
+    const validContacts = contact.filter(item => 
+        item && item.type && item.value && item.type.trim() && item.value.trim()
+    );
+
+    contactContainer.innerHTML = validContacts.map(item => {
         let valueContent = item.value;
         
         // Make LinkedIn and GitHub clickable links
@@ -416,7 +421,7 @@ function populateContact(contact) {
         `;
     }).join('');
     
-    console.log(`Populated ${contact.length} contact items`);
+    console.log(`Populated ${validContacts.length} contact items`);
 }
 
 // Initialize EmailJS

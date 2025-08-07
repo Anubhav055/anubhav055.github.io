@@ -100,6 +100,12 @@ const fallbackData = {
         }
     ],
     
+    languages: [
+        { language: 'English', proficiency: 'Professional', icon: '🌍' },
+        { language: 'Hindi', proficiency: 'Elementary', icon: '🇮🇳' },
+        { language: 'Bengali', proficiency: 'Elementary', icon: '📚' }
+    ],
+    
     contact: [
         { type: 'Phone', value: '070037 05171', icon: 'fas fa-phone' },
         { type: 'Email', value: 'anubhav.rajput055@gmail.com', icon: 'fas fa-envelope' },
@@ -231,18 +237,20 @@ async function loadDynamicContent() {
         console.log('Loading dynamic content...');
         
         // Try to load CSV files, fallback to embedded data if failed
-        const [skills, experience, projects, education, contact] = await Promise.all([
+        const [skills, experience, projects, education, languages, contact] = await Promise.all([
             loadCSV('data/skills.csv'),
             loadCSV('data/experience.csv'),
             loadCSV('data/projects.csv'),
             loadCSV('data/education.csv'),
+            loadCSV('data/languages.csv'),
             loadCSV('data/contact.csv')
         ]);
 
-        console.log('Data loaded:', { skills: skills.length, experience: experience.length, projects: projects.length });
+        console.log('Data loaded:', { skills: skills.length, experience: experience.length, projects: projects.length, languages: languages.length });
 
         // Populate sections with data
         populateSkills(skills);
+        populateLanguages(languages);
         populateExperience(experience);
         populateProjects(projects);
         populateEducation(education);
@@ -253,6 +261,7 @@ async function loadDynamicContent() {
         console.error('Error loading dynamic content:', error);
         // Load fallback data directly if everything fails
         populateSkills(fallbackData.skills);
+        populateLanguages(fallbackData.languages);
         populateExperience(fallbackData.experience);
         populateProjects(fallbackData.projects);
         populateEducation(fallbackData.education);
@@ -282,6 +291,30 @@ function populateSkills(skills) {
     `).join('');
     
     console.log(`Populated ${skills.length} skills`);
+}
+
+// Populate Languages Section
+function populateLanguages(languages) {
+    const languagesContainer = document.getElementById('languages-container');
+    if (!languagesContainer) {
+        console.error('Languages container not found');
+        return;
+    }
+    
+    if (!languages || languages.length === 0) {
+        console.warn('No languages data available');
+        return;
+    }
+
+    languagesContainer.innerHTML = languages.map((lang, index) => `
+        <div class="language-item" data-aos="fade-up" data-aos-delay="${index * 100}">
+            <div class="language-icon">${lang.icon}</div>
+            <div class="language-name">${lang.language}</div>
+            <div class="language-level">${lang.proficiency}</div>
+        </div>
+    `).join('');
+    
+    console.log(`Populated ${languages.length} languages`);
 }
 
 // Populate Experience Section
@@ -519,7 +552,7 @@ function addScrollAnimations() {
 
     // Observe all animated elements when they're added to the page
     setTimeout(() => {
-        document.querySelectorAll('.skill-item, .timeline-item, .project-card, .education-item, .contact-item').forEach(el => {
+        document.querySelectorAll('.skill-item, .language-item, .timeline-item, .project-card, .education-item, .contact-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

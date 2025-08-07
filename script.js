@@ -561,31 +561,7 @@ function addScrollAnimations() {
     }, 100);
 }
 
-// Typing effect for hero description - DISABLED
-// function initTypingEffect() {
-//     const heroDescription = document.querySelector('.hero-description');
-//     if (!heroDescription) return;
 
-//     const text = heroDescription.textContent;
-//     heroDescription.textContent = '';
-//     let i = 0;
-
-//     function typeWriter() {
-//         if (i < text.length) {
-//             heroDescription.textContent += text.charAt(i);
-//             i++;
-//             setTimeout(typeWriter, 50);
-//         }
-//     }
-
-//     // Start typing effect after a delay
-//     setTimeout(typeWriter, 1000);
-// }
-
-// Initialize typing effect when page loads - DISABLED
-// window.addEventListener('load', () => {
-//     setTimeout(initTypingEffect, 500);
-// });
 
 // Scroll to top functionality
 function scrollToTop() {
@@ -607,14 +583,14 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const scrolled = window.pageYOffset;
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+// Parallax effect for hero section - DISABLED for performance
+// window.addEventListener('scroll', () => {
+//     const hero = document.querySelector('.hero');
+//     if (hero) {
+//         const scrolled = window.pageYOffset;
+//         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+//     }
+// });
 
 // Skills progress animation
 function animateSkillBars() {
